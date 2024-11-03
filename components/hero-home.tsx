@@ -26,13 +26,13 @@ export default function HeroHome() {
               >
                 O projeto FACEU (Ferramentas de Aplicações Computacionais de Engenharias/UFERSA) surge para atender uma necessidade crucial na formação de engenheiros e no trabalho de profissionais da área: a disponibilização de ferramentas de cálculo didático-pedagógicas de acesso livre e gratuito. Esses algoritmos e ferramentas são desenvolvidos para auxiliar na resolução de problemas complexos e no desenvolvimento de projetos de engenharia, simplificando rotinas de cálculo e aumentando a precisão e a eficiência. FACEU é voltado tanto para estudantes de engenharia quanto para profissionais de áreas correlatas.
               </p>
-              <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
-                <div
+              {/* <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]"> */}
+              {/* <div
                   className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
                   data-aos="zoom-y-out"
                   data-aos-delay={450}
-                >
-                  <a
+                > */}
+              {/* <a
                     className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
                     href="#0"
                   >
@@ -42,15 +42,15 @@ export default function HeroHome() {
                         -&gt;
                       </span>
                     </span>
-                  </a>
-                  {/* <a
+                  </a> */}
+              {/* <a
                     className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
                     href="#0"
                   >
                     Saiba mais sobre nós
                   </a> */}
-                </div>
-              </div>
+              {/* </div> */}
+              {/* </div> */}
             </div>
           </div>
           {/* Hero image */}
