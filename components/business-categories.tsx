@@ -12,11 +12,23 @@ import Logo09 from "@/public/images/logo-09.svg";
 export default function BusinessCategories() {
   return (
     <section>
+      <h1
+        className="mb-6 text-center border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl"
+        data-aos="zoom-y-out"
+      // data-aos-delay={150}
+      >
+        TECNOLOGIAS UTILIZADAS
+      </h1>
+
+
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
+
           {/* Tab panels */}
+
           <div className="relative flex h-[324px] items-center justify-center">
             {/* Small blue dots */}
+
             <div className="absolute -z-10">
               <svg
                 className="fill-blue-500"
@@ -182,7 +194,7 @@ export default function BusinessCategories() {
                     src={Logo01}
                     width={32}
                     height={32}
-                    alt="Logo 01"
+                    alt="Logo simplificada FACEU"
                   />
                 </div>
               </div>
@@ -198,7 +210,7 @@ export default function BusinessCategories() {
                         src={Logo02}
                         width={23}
                         height={22}
-                        alt="Logo 02"
+                        alt="Logo Github"
                       />
                     </div>
                   </div>
@@ -211,7 +223,7 @@ export default function BusinessCategories() {
                         src={Logo03}
                         width={22}
                         height={22}
-                        alt="Logo 03"
+                        alt="Logo Google"
                       />
                     </div>
                   </div>
@@ -224,7 +236,7 @@ export default function BusinessCategories() {
                         src={Logo04}
                         width={24}
                         height={22}
-                        alt="Logo 04"
+                        alt="Logo Flutter"
                       />
                     </div>
                   </div>
@@ -237,7 +249,7 @@ export default function BusinessCategories() {
                         src={Logo05}
                         width={25}
                         height={25}
-                        alt="Logo 05"
+                        alt="Logo React"
                       />
                     </div>
                   </div>
@@ -250,7 +262,7 @@ export default function BusinessCategories() {
                         src={Logo06}
                         width={20}
                         height={18}
-                        alt="Logo 06"
+                        alt="Logo Figma"
                       />
                     </div>
                   </div>
@@ -263,7 +275,7 @@ export default function BusinessCategories() {
                         src={Logo07}
                         width={25}
                         height={25}
-                        alt="Logo 07"
+                        alt="Logo Netlify"
                       />
                     </div>
                   </div>
@@ -276,7 +288,7 @@ export default function BusinessCategories() {
                         src={Logo08}
                         width={20}
                         height={20}
-                        alt="Logo 08"
+                        alt="Logo Vue js"
                       />
                     </div>
                   </div>
@@ -289,7 +301,7 @@ export default function BusinessCategories() {
                         src={Logo09}
                         width={21}
                         height={13}
-                        alt="Logo 09"
+                        alt="Logo Tailwind"
                       />
                     </div>
                   </div>
