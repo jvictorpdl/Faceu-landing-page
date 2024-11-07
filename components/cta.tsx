@@ -31,19 +31,33 @@ export default function Cta() {
           </div>
           <div className="px-4 py-12 md:px-12 md:py-20">
             <h2 className="mb-6 border-y text-3xl font-bold text-gray-200 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.700/.7),transparent)1] md:mb-12 md:text-4xl">
-              Create your next project with Simple
+              Veja as Nossas Ferramentas!
             </h2>
-            <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
+            <div className="mx-auto flex max-w-xs flex-wrap justify-center gap-4 sm:max-w-none">
               <a
-                className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                href="#0"
+                href="https://topoufersa.netlify.app"
+                className="px-4 py-2 rounded-lg text-white font-bold shadow bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] hover:bg-[length:100%_150%] transition-all duration-200"
               >
-                <span className="relative inline-flex items-center">
-                  Start Free Trial{" "}
-                  <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
-                    -&gt;
-                  </span>
-                </span>
+                TOPOUFERSA
+              </a>
+              <a
+                href="https://etaufersa.netlify.app"
+                className="px-4 py-2 rounded-lg text-white font-bold shadow bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] hover:bg-[length:100%_150%] transition-all duration-200"
+              >
+                ETA UFERSA
+              </a>
+              <a
+                href="https://eteufersa.vercel.app"
+                className="px-4 py-2 rounded-lg text-white font-bold shadow bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] hover:bg-[length:100%_150%] transition-all duration-200"
+              >
+                ETE UFERSA
+              </a>
+              <a
+                href="https://calimpe-h20.netlify.app/"
+                className="px-4 py-2 rounded-lg text-white font-bold shadow bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] hover:bg-[length:100%_150%] transition-all duration-200"
+              >
+                {/* Calimpe-H2O */}
+                CALIMPE-H20
               </a>
             </div>
           </div>
