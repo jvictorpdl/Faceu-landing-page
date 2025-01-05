@@ -9,32 +9,32 @@ import "swiper/css/pagination";
 
 const collaborators = [
   {
-    name: "João Bilu",
-    role: "Desenvolvedor Frontend",
-    image: "/images/collaborator-1.jpg",
+    name: "Hildi Dante",
+    role: "Desenvolvedor",
+    image: "/images/HildiDante.jpg",
     social: {
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com/in",
+      instagram: "https://www.instagram.com/hildi_dante/",
+      linkedin: "https://www.linkedin.com/in/hildi-dante-217202232",
       twitter: "https://twitter.com",
     },
   },
   {
-    name: "Maria Braga",
-    role: "Designer UI/UX",
-    image: "/images/collaborator-2.jpg",
+    name: "João Victor",
+    role: "Desenvolvedor",
+    image: "/images/JoãoVictor.jpg",
     social: {
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com/in",
+      instagram: "https://www.instagram.com/victorpdl_/",
+      linkedin: "https://www.linkedin.com/in/joão-victor-lucena-586069191",
       twitter: "https://twitter.com",
     },
   },
   {
-    name: "Carol Paiva",
-    role: "Gerente de Projetos",
-    image: "/images/collaborator-3.jpg",
+    name: "Arthur Kairan",
+    role: "Desenvolvedor",
+    image: "/images/ArthurKairan.jpg",
     social: {
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com/in",
+      instagram: "https://www.instagram.com/arthurkairan_/",
+      linkedin: "https://www.linkedin.com/in/arthur-kairan",
       twitter: "https://twitter.com",
     },
   },
@@ -94,35 +94,29 @@ export default function ClientSwiper() {
   return (
     <Swiper
       modules={[Navigation, Pagination]}
-      navigation={{
-        prevEl: '.swiper-button-prev', //sem uso para att futura
-        nextEl: '.swiper-button-next',
-      }}
-      pagination={{
-        clickable: true,
-        el: '.swiper-pagination', //sem uso para att futura
-        type: 'bullets',
-        
-      }}
-      spaceBetween={50}
+      spaceBetween={30}
       slidesPerView={3}
+      pagination={{ clickable: true }}
     >
       {collaborators.map((collaborator, index) => (
         <SwiperSlide key={index}>
-          <div className="text-center bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col justify-between h-full">
-            <img
-              src={collaborator.image}
-              alt={collaborator.name}
-              className="rounded-lg mb-4 h-75 object-cover w-full"
-            />
-            <h3 className="text-lg font-bold text-gray-200">{collaborator.name}</h3>
-            <p className="text-sm text-gray-400">{collaborator.role}</p>
-            <div className="flex justify-center space-x-4 mt-4">
+          <div className="text-center p-6 border rounded-lg shadow-lg bg-white flex flex-col items-center">
+            <div className="relative w-24 h-24 mb-4">
+              <img
+                src={collaborator.image}
+                alt={collaborator.name}
+                className="rounded-full border-4 border-gray-900 object-cover w-full h-full"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-gray-800">{collaborator.name}</h3>
+            <p className="text-gray-900 text-sm font-semibold mb-4">{collaborator.role}</p>
+            
+            <div className="flex space-x-4">
               <a
                 href={collaborator.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-gray-500"
+                className="text-gray-500 hover:text-gray-900"
               >
                 <FaInstagram size={20} />
               </a>
@@ -130,7 +124,7 @@ export default function ClientSwiper() {
                 href={collaborator.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-gray-500"
+                className="text-gray-500 hover:text-gray-900"
               >
                 <FaLinkedin size={20} />
               </a>
@@ -138,7 +132,7 @@ export default function ClientSwiper() {
                 href={collaborator.social.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-gray-500"
+                className="text-gray-500 hover:text-gray-900"
               >
                 <FaTwitter size={20} />
               </a>
@@ -146,7 +140,6 @@ export default function ClientSwiper() {
           </div>
         </SwiperSlide>
       ))}
-      
     </Swiper>
   );
 }

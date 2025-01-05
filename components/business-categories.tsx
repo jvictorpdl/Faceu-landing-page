@@ -11,7 +11,7 @@ import Logo09 from "@/public/images/logo-09.svg";
 
 export default function BusinessCategories() {
   return (
-    <section>
+    <section id= 'tecnologias'>
       <h1
         className="mb-6 text-center border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl"
         data-aos="zoom-y-out"
