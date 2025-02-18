@@ -35,7 +35,7 @@ export default function Cta() {
             </h2>
             <div className="mx-auto flex max-w-xs flex-wrap justify-center gap-4 sm:max-w-none">
               <a
-                href="https://topoufersa.netlify.app"
+                href="/topoufersa"
                 className="px-4 py-2 rounded-lg text-white font-bold shadow bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] hover:bg-[length:100%_150%] transition-all duration-200"
               >
                 TOPOUFERSA
