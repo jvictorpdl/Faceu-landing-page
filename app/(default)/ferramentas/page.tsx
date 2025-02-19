@@ -1,3 +1,8 @@
+import Cta from "@/components/cta";
+
 export default function Ferramentas() {
-    return <h1>FERRAMENTAS Page</h1>;
+    return <> 
+    <br />      
+    <Cta />
+    </>;
   }
