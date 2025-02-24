@@ -1,68 +1,44 @@
 import Image from "next/image";
 import Stripes from "@/public/images/stripes-dark.svg";
 
+import { FaEarthAmericas, FaHouseFloodWaterCircleArrowRight, FaArrowUpFromWaterPump } from "react-icons/fa6";
+import { BiSolidDonateBlood } from "react-icons/bi";
+
 export default function Cta() {
   return (
-    <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div
-          className="relative overflow-hidden rounded-2xl text-center shadow-xl before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-2xl before:bg-gray-900"
-          data-aos="zoom-y-out"
-        >
-          {/* Glow */}
-          <div
-            className="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2 translate-y-1/2"
-            aria-hidden="true"
+    <section className="bg-gradient-to-r from-blue-700 to-green-700 py-16 text-white">
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-4xl font-extrabold leading-tight mb-8">Explore as Nossas Ferramentas de Engenharia</h2>
+        <p className="text-xl mb-12">Ferramentas inovadoras desenvolvidas para otimizar o aprendizado e a prática de engenheiros e acadêmicos.</p>
+        <div className="flex justify-center gap-8">
+          <a
+            href="/topoufersa"
+            className="bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg py-3 px-6 transition duration-200 transform hover:scale-105 flex items-center gap-2"
           >
-            <div className="h-56 w-[480px] rounded-full border-[20px] border-blue-500 blur-3xl" />
-          </div>
-          {/* Stripes illustration */}
-          <div
-            className="pointer-events-none absolute left-1/2 top-0 -z-10 -translate-x-1/2 transform"
-            aria-hidden="true"
+            <FaEarthAmericas size={20} /> TOPOUFERSA
+          </a>
+          <a
+            href="https://etaufersa.netlify.app"
+            className="bg-green-600 hover:bg-green-500 text-white font-semibold rounded-lg py-3 px-6 transition duration-200 transform hover:scale-105 flex items-center gap-2"
           >
-            <Image
-              className="max-w-none"
-              src={Stripes}
-              width={768}
-              height={432}
-              alt="Stripes"
-            />
-          </div>
-          <div className="px-4 py-12 md:px-12 md:py-20">
-            <h2 className="mb-6 border-y text-3xl font-bold text-gray-200 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.700/.7),transparent)1] md:mb-12 md:text-4xl">
-              Veja as Nossas Ferramentas!
-            </h2>
-            <div className="mx-auto flex max-w-xs flex-wrap justify-center gap-4 sm:max-w-none">
-              <a
-                href="/topoufersa"
-                className="px-4 py-2 rounded-lg text-white font-bold shadow bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] hover:bg-[length:100%_150%] transition-all duration-200"
-              >
-                TOPOUFERSA
-              </a>
-              <a
-                href="https://etaufersa.netlify.app"
-                className="px-4 py-2 rounded-lg text-white font-bold shadow bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] hover:bg-[length:100%_150%] transition-all duration-200"
-              >
-                ETA UFERSA
-              </a>
-              <a
-                href="https://eteufersa.vercel.app"
-                className="px-4 py-2 rounded-lg text-white font-bold shadow bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] hover:bg-[length:100%_150%] transition-all duration-200"
-              >
-                ETE UFERSA
-              </a>
-              <a
-                href="https://calimpe-h20.netlify.app/"
-                className="px-4 py-2 rounded-lg text-white font-bold shadow bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] hover:bg-[length:100%_150%] transition-all duration-200"
-              >
-                {/* Calimpe-H2O */}
-                CALIMPE-H20
-              </a>
-            </div>
-          </div>
+            <BiSolidDonateBlood size={20} /> ETA UFERSA
+          </a>
+          <a
+            href="https://eteufersa.vercel.app"
+            className="bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg py-3 px-6 transition duration-200 transform hover:scale-105 flex items-center gap-2"
+          >
+            <FaHouseFloodWaterCircleArrowRight size={20} /> ETE UFERSA
+          </a>
+          <a
+            href="https://calimpe-h20.netlify.app/"
+            className="bg-yellow-900 hover:bg-yellow-800 text-white font-semibold rounded-lg py-3 px-6 transition duration-200 transform hover:scale-105 flex items-center gap-2"
+          >
+
+            <FaArrowUpFromWaterPump size={20} /> CALIMPE H2O
+          </a>
         </div>
       </div>
     </section>
+
   );
 }
