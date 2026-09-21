@@ -1,0 +1,35 @@
+<!-- @dsCard group="Components" viewport="700x900" name="Catalog — tools, documents, people, research" subtitle="Tool cards, manual rows, team cards, publications, steps, specs" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>FACEU card</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:24px;background:var(--surface-page)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.FACEUDesignSystem_27f931;
+
+const { ToolCard, DocumentCard, TeamCard, PublicationItem, ProcessSteps, FeatureList, SpecTable, Accordion } = NS;
+function Demo(){return(<div className="stack">
+  <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+    <ToolCard name="FACEU Mapper" shortDescription="Builds a structured map of accessibility barriers from field survey data." category="Mapping" status="stable" version="v2.1" icon="map" manualLabel="User manual"/>
+    <ToolCard tone="dark" name="FACEU Assess" shortDescription="Scores environments against the project's evaluation criteria." category="Assessment" status="beta" version="v0.9" icon="clipboard-check" manualLabel="Quick start"/>
+  </div>
+  <DocumentCard title="FACEU Mapper — User Manual" tool="FACEU Mapper" type="User manual" version="Version 2.1" language="Portuguese" format="PDF" fileSize="4.2 MB" updatedAt="March 2026" current/>
+  <DocumentCard title="FACEU Mapper — User Manual" tool="FACEU Mapper" type="User manual" version="Version 1.4" language="Portuguese" format="PDF" fileSize="3.8 MB" updatedAt="August 2025"/>
+  <div style={{display:"grid",gridTemplateColumns:"260px 1fr",gap:16,alignItems:"start"}}>
+    <TeamCard name="Name Surname" role="Project coordination" title="PhD, Computer Engineering" institution="Partner university" expertise="Accessibility · HCI" links={[{icon:"graduation-cap",label:"Lattes"},{icon:"circle-user",label:"ORCID"},{icon:"linkedin",label:"LinkedIn"}]}/>
+    <div className="stack">
+      <FeatureList columns={1} items={[{title:"Structured survey import",description:"Reads CSV and spreadsheet exports."},{title:"Versioned reports",description:"Every export keeps its parameters."}]}/>
+      <SpecTable caption="Technical information" rows={[{label:"Platform",value:"Web (browser)"},{label:"Supported formats",value:"CSV, XLSX, PDF export"},{label:"Requirements",value:"Modern browser, no install"}]}/>
+    </div>
+  </div>
+  <ProcessSteps columns={2} steps={[{title:"Prepare the information",description:"Collect the survey data the tool expects."},{title:"Configure the tool",description:"Choose the criteria set for the study."},{title:"Run the process",description:"The tool produces a structured result set."},{title:"Interpret and export",description:"Review, then export the report."}]}/>
+  <div><PublicationItem year="2026" title="Published paper title as it appears in the proceedings" authors="Surname, N.; Surname, A." venue="Conference name" type="Conference paper" doi="10.0000/xxxx" pdfHref="#"/>
+  <PublicationItem year="2025" title="Technical report on the project methodology" authors="Surname, N." venue="Project technical series" type="Technical report" href="#"/></div>
+  <Accordion defaultOpen={0} items={[{title:"Who is the tool for?",content:<p>Researchers, students and institutional teams applying the project's methodology in the field.</p>},{title:"Which problem does it address?",content:<p>Field data is usually collected inconsistently, which makes results hard to compare between studies.</p>}]}/>
+</div>)}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

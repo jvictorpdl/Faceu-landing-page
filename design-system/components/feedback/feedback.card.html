@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x330" name="Feedback — callouts & dialog" subtitle="Tinted asides and the centred dialog" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>FACEU card</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:24px;background:var(--surface-page)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.FACEUDesignSystem_27f931;
+
+const { Callout, Modal, Button } = NS;
+function Demo(){const [o,setO]=React.useState(false);return(<div className="stack">
+  <Callout tone="note" title="Version note">Version 2.1 changes the report export format; files produced by 1.x remain readable.</Callout>
+  <Callout tone="info" title="Requirements">Runs in any modern browser. No installation is required.</Callout>
+  <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+    <Callout tone="warning" title="Beta tool">Results should be reviewed before being used in published work.</Callout>
+    <Callout tone="success" title="Current version">You are viewing the documentation for the current release.</Callout>
+  </div>
+  <div className="row"><Button variant="outline" onClick={()=>setO(true)}>Open download dialog</Button></div>
+  <Modal open={o} title="Download details" description="FACEU Mapper — User manual, version 2.1" onClose={()=>setO(false)} footer={<><Button variant="ghost" onClick={()=>setO(false)}>Cancel</Button><Button icon="download">Download user manual</Button></>}>
+    <p style={{fontFamily:"var(--font-mono)",fontSize:12,letterSpacing:".04em",color:"var(--text-muted)"}}>PDF · 4.2 MB · Portuguese · Updated March 2026</p>
+  </Modal>
+</div>)}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

@@ -1,0 +1,44 @@
+:root{
+  --font-display:"Poppins","Helvetica Neue",Arial,sans-serif;
+  --font-body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-semibold:600;
+  --weight-bold:700;
+
+  /* Display — Poppins, tight tracking, set in --font-display */
+  --size-display-xl:72px;
+  --size-display-l:56px;
+  --size-display-m:44px;
+  --size-h1:36px;
+  --size-h2:28px;
+  --size-h3:22px;
+  --size-h4:18px;
+
+  /* Body — IBM Plex Sans */
+  --size-body-l:18px;
+  --size-body-m:16px;
+  --size-body-s:14px;
+  --size-body-xs:13px;
+
+  /* Meta — IBM Plex Mono, uppercase eyebrows, versions, file sizes */
+  --size-meta:12px;
+  --size-eyebrow:12px;
+
+  --lh-display:1.04; /* @kind font */
+  --lh-heading:1.18; /* @kind font */
+  --lh-snug:1.35; /* @kind font */
+  --lh-body:1.6; /* @kind font */
+  --lh-loose:1.72; /* @kind font */
+
+  --track-display:-0.025em; /* @kind font */
+  --track-heading:-0.015em; /* @kind font */
+  --track-body:0em; /* @kind font */
+  --track-eyebrow:0.14em; /* @kind font */
+  --track-meta:0.04em; /* @kind font */
+
+  --measure-prose:68ch; /* @kind other */
+  --measure-narrow:46ch; /* @kind other */
+}

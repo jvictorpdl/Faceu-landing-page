@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Tool detail page" description="FACEU tool page: header with status and version, overview, features, steps, technical table and prominent documentation downloads." -->
+<helmet><script src="./ds-base.js"></script><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script><style>body{margin:0;background:#fff}</style></helmet>
+<div style="font-family:var(--font-body);color:var(--text-body);background:var(--surface-page)">
+<div class="faceu-grid-bg" style="background:var(--grad-hero);padding:28px 0 64px">
+<div style="max-width:1240px;margin:0 auto;padding:0 24px">
+<x-import component-from-global-scope="FACEUDesignSystem_27f931.Breadcrumb" tone="dark" items="{{ trail }}" hint-size="100%,20px"></x-import>
+<div style="font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-400);margin:32px 0 16px">Mapping</div>
+<h1 style="font-family:var(--font-display);font-size:56px;line-height:1.04;letter-spacing:-.025em;font-weight:600;color:#fff;margin:0;max-width:20ch">FACEU Tool name</h1>
+<p style="margin:20px 0 0;max-width:58ch;font-size:18px;line-height:1.6;color:var(--text-on-dark-muted)">One sentence saying what the tool does and for whom — the same line used on its catalog card.</p>
+<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:32px">
+<x-import component-from-global-scope="FACEUDesignSystem_27f931.Button" size="lg" variant="primary" chip="{{ true }}" icon-after="arrow-down" hint-size="260px,52px">Download user manual</x-import>
+<x-import component-from-global-scope="FACEUDesignSystem_27f931.StatusBadge" status="{{ status }}" hint-size="90px,26px"></x-import>
+<span style="font-family:var(--font-mono);font-size:14px;letter-spacing:.04em;color:var(--text-on-dark-muted)">v1.0</span>
+</div>
+</div>
+</div>
+<div style="max-width:1240px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:64px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:48px">
+<section>
+<h2 style="font-family:var(--font-display);font-size:28px;letter-spacing:-.015em;color:var(--text-strong);margin:0 0 16px">Overview</h2>
+<p style="max-width:68ch;font-size:18px;line-height:1.6;color:var(--text-body);margin:0">Explain what the tool is and the problem it was designed to address. Two or three sentences — the manual carries the detail.</p>
+</section>
+<section>
+<h3 style="font-family:var(--font-display);font-size:22px;letter-spacing:-.015em;color:var(--text-strong);margin:0 0 12px">Who it is for</h3>
+<p style="max-width:68ch;font-size:16px;line-height:1.6;color:var(--text-muted);margin:0">Name the intended users: researchers, students, institutional teams, partner organisations.</p>
+</section>
+<section>
+<h3 style="font-family:var(--font-display);font-size:22px;letter-spacing:-.015em;color:var(--text-strong);margin:0 0 24px">Key features</h3>
+<x-import component-from-global-scope="FACEUDesignSystem_27f931.FeatureList" columns="{{ 2 }}" items="{{ features }}" hint-size="100%,160px"></x-import>
+</section>
+<section>
+<h3 style="font-family:var(--font-display);font-size:22px;letter-spacing:-.015em;color:var(--text-strong);margin:0 0 24px">How it works</h3>
+<x-import component-from-global-scope="FACEUDesignSystem_27f931.ProcessSteps" columns="{{ 2 }}" steps="{{ steps }}" hint-size="100%,320px"></x-import>
+</section>
+<section>
+<h3 style="font-family:var(--font-display);font-size:22px;letter-spacing:-.015em;color:var(--text-strong);margin:0 0 24px">Technical information</h3>
+<x-import component-from-global-scope="FACEUDesignSystem_27f931.SpecTable" rows="{{ spec }}" hint-size="100%,240px"></x-import>
+</section>
+<section>
+<h3 style="font-family:var(--font-display);font-size:22px;letter-spacing:-.015em;color:var(--text-strong);margin:0 0 24px">Documentation</h3>
+<div style="display:flex;flex-direction:column;gap:12px">
+<x-import component-from-global-scope="FACEUDesignSystem_27f931.DocumentCard" title="Tool name — User Manual" tool="FACEU Tool name" type="User manual" version="Version 1.0" language="Portuguese" format="PDF" file-size="3.4 MB" updated-at="March 2026" current="{{ true }}" hint-size="100%,110px"></x-import>
+<x-import component-from-global-scope="FACEUDesignSystem_27f931.DocumentCard" title="Tool name — Technical Manual" tool="FACEU Tool name" type="Technical manual" version="Version 1.0" language="English" format="PDF" file-size="2.1 MB" updated-at="March 2026" current="{{ true }}" hint-size="100%,110px"></x-import>
+<sc-if value="{{ showVersionHistory }}" hint-placeholder-val="{{ true }}">
+<x-import component-from-global-scope="FACEUDesignSystem_27f931.DocumentCard" title="Tool name — User Manual" tool="FACEU Tool name" type="User manual" version="Version 0.9" language="Portuguese" format="PDF" file-size="3.1 MB" updated-at="September 2025" hint-size="100%,110px"></x-import>
+</sc-if>
+</div>
+</section>
+</div>
+<aside style="display:flex;flex-direction:column;gap:20px;position:sticky;top:24px">
+<div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:14px;padding:24px">
+<div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-accent)">Documentation</div>
+<div style="display:flex;flex-direction:column;gap:8px;margin-top:16px">
+<x-import component-from-global-scope="FACEUDesignSystem_27f931.Button" variant="primary" size="sm" icon="download" full-width="{{ true }}" hint-size="100%,38px">User manual</x-import>
+<x-import component-from-global-scope="FACEUDesignSystem_27f931.Button" variant="outline" size="sm" icon="download" full-width="{{ true }}" hint-size="100%,38px">Technical manual</x-import>
+</div>
+<p style="margin:16px 0 0;font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;color:var(--text-faint)">PDF · 3.4 MB · updated March 2026</p>
+</div>
+<div style="background:var(--surface-card-alt);border:1px solid var(--border-subtle);border-radius:14px;padding:24px">
+<div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-accent)">At a glance</div>
+<div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;font-size:14px">
+<div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--border-subtle)"><span style="color:var(--text-muted)">Category</span><span style="color:var(--text-strong);font-weight:500">Mapping</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--border-subtle)"><span style="color:var(--text-muted)">Version</span><span style="color:var(--text-strong);font-weight:500">1.0</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:var(--text-muted)">Documents</span><span style="color:var(--text-strong);font-weight:500">2</span></div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1240,&quot;height&quot;:900},&quot;status&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;stable&quot;,&quot;beta&quot;,&quot;development&quot;,&quot;archived&quot;],&quot;default&quot;:&quot;stable&quot;,&quot;tsType&quot;:&quot;\&quot;stable\&quot; | \&quot;beta\&quot; | \&quot;development\&quot; | \&quot;archived\&quot;&quot;,&quot;section&quot;:&quot;Tool&quot;},&quot;showVersionHistory&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Documentation&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      status: this.props.status ?? "stable",
+      trail: [{ label: "Home", href: "#" }, { label: "Tools", href: "#tools" }, { label: "FACEU Tool name" }],
+      showVersionHistory: this.props.showVersionHistory ?? true,
+      features: [
+        { title: "First capability", description: "One line on what it does for the user." },
+        { title: "Second capability", description: "Keep features to four or six in total." },
+        { title: "Third capability", description: "The manual carries the detail." },
+        { title: "Fourth capability", description: "Name outcomes, not implementation." }
+      ],
+      steps: [
+        { title: "Prepare the required information", description: "What the user needs before starting." },
+        { title: "Access or configure the tool", description: "Where it runs and what to set." },
+        { title: "Execute the process", description: "What the tool does once started." },
+        { title: "Review the generated results", description: "What to check before using the output." },
+        { title: "Export or interpret the information", description: "How results leave the tool." }
+      ],
+      spec: [
+        { label: "Platform", value: "Web (browser)" },
+        { label: "Technologies", value: "Add the stack" },
+        { label: "Requirements", value: "Modern browser · no installation" },
+        { label: "Supported formats", value: "CSV, XLSX in · PDF out" },
+        { label: "Version", value: "1.0" },
+        { label: "Language", value: "Portuguese, English" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

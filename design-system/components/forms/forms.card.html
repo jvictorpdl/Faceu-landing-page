@@ -1,0 +1,27 @@
+<!-- @dsCard group="Components" viewport="700x380" name="Forms — inputs, select, search" subtitle="6px fields, cyan focus ring, labelled controls" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>FACEU card</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:24px;background:var(--surface-page)}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.FACEUDesignSystem_27f931;
+
+const { Field, Input, Textarea, Select, Checkbox, SearchField } = NS;
+function Demo(){const [c,setC]=React.useState(true);return(<div className="stack">
+  <SearchField scopes={["Everything","Tools","Manuals","Publications","People"]}/>
+  <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
+    <Field label="Full name" htmlFor="n" required><Input id="n" placeholder="Name Surname"/></Field>
+    <Field label="Document type" htmlFor="t" hint="Filters the resource library"><Select id="t" options={["All document types","User manual","Technical manual","Quick start guide"]}/></Field>
+    <Field label="Institutional email" htmlFor="e" error="Enter a valid email address"><Input id="e" invalid icon="mail" defaultValue="name@"/></Field>
+    <Field label="Search" htmlFor="s"><Input id="s" icon="search" size="sm" placeholder="Search tools"/></Field>
+  </div>
+  <Field label="Message" htmlFor="m"><Textarea id="m" rows={3} placeholder="Tell us about the collaboration you have in mind"/></Field>
+  <Checkbox id="k" label="I agree to be contacted about this enquiry" description="We reply within five working days." checked={c} onChange={()=>setC(!c)}/>
+</div>)}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>
